@@ -7,7 +7,7 @@
 
 @font-face {
     font-family: 'Bangla1';
-    src: url('/Assets/Lipishree.ttf');
+    src: url('Assets/Lipishree.ttf');
 }
 
 body {
@@ -377,3 +377,4 @@ select {
     }
 
 }
+
