@@ -5,11 +5,6 @@ function showDetails() {
     document.getElementById("details").scrollIntoView({ behavior: "smooth" });
 }
 
-// MAP
-// function openMap() {
-//     window.open("https://www.google.com/maps");
-// }
-
 // RSVP
 function sendWhatsApp(event){
     event.preventDefault();
@@ -18,10 +13,9 @@ function sendWhatsApp(event){
     var guests = document.getElementById("guests").value;
     var attendance = document.getElementById("attendance").value;
     
-    /* 🔴 CHANGE THIS NUMBER */
-    var phoneNumber = "919999999999"; 
-    // Format: country code + number
-    // Example India: 91XXXXXXXXXX
+    /* CHANGE THIS NUMBER */
+    var phoneNumber = "917031783413"; 
+
     
     var message = 
     "!! Wedding RSVP !!%0A%0A" +
@@ -35,61 +29,9 @@ function sendWhatsApp(event){
     window.open(whatsappURL, "_blank");
     }
     
-
-// COUNTDOWN
-// var weddingDate = new Date("March 4, 2025 18:00:00").getTime();
-
-// var timer = setInterval(function(){
-
-// var now = new Date().getTime();
-// var distance = weddingDate - now;
-
-// // ✅ IF DATE IS OVER
-// if(distance <= 0){
-
-// clearInterval(timer);
-
-// // Hide countdown
-// document.querySelector(".countdown").style.display = "none";
-
-// // Show message
-// var message = document.createElement("h2");
-// message.innerHTML = "💍 We Are Married! 🎉<br>Thank You For Your Blessings ❤️";
-// message.style.color = "#e91e63";
-// message.style.marginTop = "20px";
-// message.style.animation = "fadeIn 2s ease";
-
-// document.querySelector(".card").appendChild(message);
-
-// return;
-// }
-
-// // NORMAL COUNTDOWN
-// var days = Math.floor(distance / (1000*60*60*24));
-// var hours = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
-// var minutes = Math.floor((distance%(1000*60*60))/(1000*60));
-// var seconds = Math.floor((distance%(1000*60))/1000);
-
-// updateTime("days", days);
-// updateTime("hours", hours);
-// updateTime("minutes", minutes);
-// updateTime("seconds", seconds);
-
-// },1000);
-
-// function updateTime(id,value){
-// let element = document.getElementById(id);
-// element.innerHTML = value < 10 ? "0"+value : value;
-
-// element.parentElement.classList.add("animate");
-// setTimeout(()=>{
-// element.parentElement.classList.remove("animate");
-// },400);
-// }
-
 function updateCountdown() {
 
-    const weddingDate = new Date("March 4, 2026 18:00:00").getTime();
+    const weddingDate = new Date("March 4, 2026 23:58:00").getTime();
     const receptionDate = new Date("March 6, 2026 19:00:00").getTime();
     const now = new Date().getTime();
 
@@ -130,7 +72,7 @@ setInterval(updateCountdown, 1000);
 
 
 
-/* 🎆 REAL MOVING FIREWORKS */
+/* FIREWORKS */
 
 const canvas = document.getElementById("fireworks");
 const ctx = canvas.getContext("2d");
@@ -191,4 +133,5 @@ document.addEventListener("contextmenu", function(e) {
 document.addEventListener("dragstart", function(e) {
     e.preventDefault();
 });
+
 
