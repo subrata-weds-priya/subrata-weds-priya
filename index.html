@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- <audio autoplay loop>
+        <source src="/Assets/Wedding_shehnai.mp3" type="audio/mp3">
+    </audio> -->
+
+        <canvas id="fireworks"></canvas>
+
+    <section class="hero">
+
+        <div class="card">
+            <div class="image-container">
+                <h2 class="bengali-overlay">শুভ বিবাহ &nbsp;&nbsp;&nbsp;</h2>
+                <img src="/IMG/couple.jpeg" alt="Couple">
+            </div>
+
+            <h1>Subrata ❤️ Priya</h1>
+            <p>Are Getting Married</p>
+            <p class="date">04 March 2026, Wednessday</p>
+
+            <div class="countdown">
+                <div class="time-box">
+                    <span id="days">00</span>
+                    <p>Days</p>
+                </div>
+                <div class="time-box">
+                    <span id="hours">00</span>
+                    <p>Hours</p>
+                </div>
+                <div class="time-box">
+                    <span id="minutes">00</span>
+                    <p>Minutes</p>
+                </div>
+                <div class="time-box">
+                    <span id="seconds">00</span>
+                    <p>Seconds</p>
+                </div>
+            </div>
+            <p id="eventMessage" class="event-message"></p>
+
+
+
+            <button onclick="showDetails()">Open Invitation</button>
+
+        </div>
+    </section>
+
+
+    <section class="details" id="details">
+
+        <hr class="section-divider">
+
+        <div class="reception-section">
+
+            <h2 class="reception-title">Wedding Reception</h2>
+
+            <div class="reception-card">
+                <p class="reception-venue"><span>PURNA KUTHIR LODGE</span><br>Kaushallya, Kharagpur, Paschim Medinipur
+                </p>
+                <p class="reception-date">06 March 2026, Friday</p>
+                <p class="reception-time">7:00 PM Onwards</p>
+
+                <button onclick="openReceptionMap()">View Reception Location</button>
+            </div>
+
+        </div>
+
+        <!-- 
+        <h2>Wedding Ceremony</h2>
+        <p>With Blessings of Our Parents</p>
+        <p>Royal Palace, Kolkata</p>
+        <p>6:00 PM onwards</p>
+
+        <br>
+        <button onclick="openMap()">View Location</button> -->
+
+        <h2 style="margin-top:30px;">!! Our Moments !!</h2>
+
+        <div class="gallery">
+            <img src="/IMG/1.jpeg">
+            <img src="/IMG/2.jpeg">
+            <img src="/IMG/3.jpeg">
+            <img src="/IMG/4.jpeg">
+            <!-- <img src="/IMG/5.jpeg"> -->
+            <img src="/IMG/6.jpeg">
+        </div>
+
+        <h2>RSVP</h2>
+
+        <form onsubmit="//sendWhatsApp(event)">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="number" id="guests" placeholder="Number of Guests" required>
+
+            <!-- <select id="attendance" required>
+                <option value="">Will you attend?</option>
+                <option value="Yes, I will attend">Yes, I will attend</option>
+                <option value="Sorry, can't attend">Sorry, can't attend</option>
+            </select> -->
+            <input type="hidden" id="attendance" value="Attending 💍">
+
+
+            <button type="submit">Send RSVP</button>
+        </form>
+
+
+        <!-- <h2 style="margin-top:30px;">RSVP</h2>
+
+        <form onsubmit="submitRSVP(event)">
+            <input type="text" placeholder="Your Name" required>
+            <input type="number" placeholder="Number of Guests" required>
+            <select required>
+                <option value="">Will you attend?</option>
+                <option>Yes, I will attend</option>
+                <option>Sorry, can't attend</option>
+            </select>
+            <button type="submit">Submit</button>
+        </form> -->
+
+
+        <footer class="wedding-footer">
+
+            <div class="footer-wave"></div>
+
+            <div class="footer-content">
+                <h3 class="couple-names">Subrata ❤️ Priya</h3>
+                <p class="thank-text">
+                    Forever begins with love 💖<br>
+
+                </p>
+
+                <div class="footer-divider"></div>
+
+                <p class="developer">
+                    Designed by ❤️
+                    <span><A href="https://www.instagram.com/dr_koushik_/profilecard/?igsh=MWc5OWN0Y3FtZjB1bg=="
+                            target="_blank">Koushik</A></span>
+                </p>
+            </div>
+
+        </footer>
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

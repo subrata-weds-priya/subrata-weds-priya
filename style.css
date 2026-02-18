@@ -1,0 +1,404 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+@font-face {
+    font-family: 'Bangla1';
+    src: url('/Assets/Lipishree.ttf');
+}
+
+body {
+    background: linear-gradient(135deg, #ffe6f0, #fff);
+    overflow-x: hidden;
+    user-select: none;
+    /* Standard */
+    -webkit-user-select: none;
+    /* Chrome/Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+}
+
+/* HERO SECTION */
+.hero {
+    min-height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 25px;
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    animation: fadeUp 1.5s ease;
+}
+
+.card img {
+    width: 320px;
+    max-width: 100%;
+    margin-bottom: 15px;
+    animation: zoom 3s infinite alternate;
+    border: #f0dc54 solid 3px;
+    border-radius: 3%;
+}
+
+/* .image-container {
+    position: relative;
+    text-align: center;
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 10px;
+} */
+
+.bengali-overlay {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-45%);
+    font-family: 'Bangla1', sans-serif;
+    font-size: 42px;
+    /* color: #ffffff; */
+    background: linear-gradient(15deg, #ff0000, #ff00dd, #ffb443);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 10px rgba(255, 234, 3, 0.962);
+    z-index: 1;
+}
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 32px;
+    color: #e91e63;
+    word-wrap: break-word;
+}
+
+.date {
+    margin: 10px 0;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    background: #e91e63;
+    color: white;
+    cursor: pointer;
+    transition: .3s;
+    font-size: 14px;
+}
+
+button:hover {
+    background: #c2185b;
+    transform: scale(1.05);
+}
+
+/* DETAILS */
+.details {
+    display: none;
+    padding: 30px 15px;
+    text-align: center;
+    background: white;
+}
+
+.details h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    /* ✅ CENTER IMAGES */
+    align-items: center;
+    gap: 15px;
+    padding: 15px 10px;
+    flex-wrap: wrap;
+    /* ✅ move to next line if needed */
+}
+
+
+.gallery img {
+    width: 280px;
+    border-radius: 18px;
+    flex-shrink: 0;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+
+/* FIREWORK CANVAS */
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* RSVP FORM */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 300px;
+    margin: 20px auto;
+}
+
+input,
+select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+/* COUNTDOWN */
+.countdown {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 15px 0;
+    flex-wrap: wrap;
+}
+
+.time-box {
+    background: linear-gradient(135deg, #ff9a9e, #71f1ff);
+    padding: 10px;
+    border-radius: 15px;
+    width: 65px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+.time-box span {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    display: block;
+}
+
+.time-box p {
+    font-size: 10px;
+    color: white;
+}
+
+.animate {
+    animation: pulse 0.5s;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* RESPONSIVE TEXT FOR VERY SMALL PHONES */
+@media(max-width:350px) {
+    h1 {
+        font-size: 26px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+}
+
+/* ANIMATION */
+/* @keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} */
+
+@keyframes zoom {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.08);
+    }
+}
+
+/* SECTION DIVIDER */
+.section-divider {
+    border: 0;
+    height: 2px;
+    background: linear-gradient(to right, #e91e63, transparent);
+    margin: 40px 0;
+}
+
+/* RECEPTION SECTION */
+.reception-section {
+    padding: 20px 0;
+}
+
+.reception-title {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #e91e63;
+    font-weight: 600;
+}
+
+/* RECEPTION CARD */
+.reception-card {
+    background: linear-gradient(135deg, #ffe6f0, #fff);
+    padding: 20px;
+    border-radius: 20px;
+    max-width: 320px;
+    margin: 0 auto;
+    box-shadow: 0 10px 25px rgba(233, 30, 99, 0.2);
+    animation: fadeUp 1s ease;
+    transition: 0.3s;
+}
+
+.reception-card:hover {
+    transform: translateY(-5px);
+}
+
+.reception-card p {
+    margin: 8px 0;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.reception-venue span {
+    color: #9c27b0;
+    /* Purple */
+    font-weight: 600;
+    font-size: 20px;
+}
+
+
+/* Optional Highlight Text */
+.reception-date {
+    font-weight: bold;
+    color: #e91e63;
+}
+
+.reception-time {
+    color: #555;
+}
+
+
+/* FOOTER */
+.wedding-footer {
+    position: relative;
+    background: linear-gradient(135deg, #fe9396, #fad0c4, #c0edf4);
+    background-size: 300% 300%;
+    animation: gradientMove 8s ease infinite;
+    color: white;
+    text-align: center;
+    padding: 60px 20px 40px;
+    overflow: hidden;
+}
+
+/* Animated Gradient */
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Stylish Couple Name */
+.couple-names {
+    font-family: 'Great Vibes', cursive;
+    font-size: 34px;
+    margin-bottom: 10px;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Thank You Text */
+.thank-text {
+    font-size: 14px;
+    line-height: 1.6;
+    opacity: 0.95;
+}
+
+/* Divider */
+.footer-divider {
+    width: 70px;
+    height: 2px;
+    background: white;
+    margin: 20px auto;
+    opacity: 0.7;
+}
+
+/* Developer Credit */
+.developer {
+    font-size: 13px;
+    opacity: 0.9;
+}
+
+.developer span a {
+    font-weight: bold;
+    color: #096464;
+    text-decoration: none;
+}
+
+/* Floating Heart Animation */
+.wedding-footer::after {
+    content: "💖";
+    position: absolute;
+    font-size: 24px;
+    bottom: 20px;
+    right: 20px;
+    animation: floatHeart 3s ease-in-out infinite;
+}
+
+@keyframes floatHeart {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
