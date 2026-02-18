@@ -51,16 +51,6 @@ body {
     border-radius: 3%;
 }
 
-/* .image-container {
-    position: relative;
-    text-align: center;
-}
-
-.image-container img {
-    width: 100%;
-    border-radius: 10px;
-} */
-
 .bengali-overlay {
     position: absolute;
     top: 10%;
@@ -68,7 +58,6 @@ body {
     transform: translateX(-45%);
     font-family: 'Bangla1', sans-serif;
     font-size: 42px;
-    /* color: #ffffff; */
     background: linear-gradient(15deg, #ff0000, #ff00dd, #ffb443);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -121,12 +110,10 @@ button:hover {
 .gallery {
     display: flex;
     justify-content: center;
-    /* ✅ CENTER IMAGES */
     align-items: center;
     gap: 15px;
     padding: 15px 10px;
     flex-wrap: wrap;
-    /* ✅ move to next line if needed */
 }
 
 
@@ -231,19 +218,6 @@ select {
         padding: 20px;
     }
 }
-
-/* ANIMATION */
-/* @keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-} */
 
 @keyframes zoom {
     from {
@@ -401,4 +375,5 @@ select {
     100% {
         transform: translateY(0);
     }
+
 }
