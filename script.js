@@ -3,6 +3,9 @@
 function showDetails() {
     document.getElementById("details").style.display = "block";
     document.getElementById("details").scrollIntoView({ behavior: "smooth" });
+    // Play audio
+    var music = document.getElementById("weddingMusic");
+    music.play();
 }
 
 // RSVP
@@ -133,5 +136,6 @@ document.addEventListener("contextmenu", function(e) {
 document.addEventListener("dragstart", function(e) {
     e.preventDefault();
 });
+
 
 
